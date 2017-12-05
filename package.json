@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon index.js",
-    "test": "nyc mocha index.js"
+    "test": "nyc mocha --watch"
   },
   "dependencies": {
     "chai": "^4.1.2",
