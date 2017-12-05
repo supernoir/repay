@@ -1,0 +1,17 @@
+{
+  "name": "repay",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "supernoir <kawohl.bentodesign@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "nyc mocha index.js"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.5",
+    "nyc": "^11.3.0"
+  }
+}
