@@ -5,11 +5,13 @@
   "author": "supernoir <kawohl.bentodesign@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "server": "nodemon server.js",
     "dev": "nodemon index.js",
     "test": "nyc mocha --watch"
   },
   "dependencies": {
     "chai": "^4.1.2",
+    "express": "^4.16.4",
     "mocha": "^4.0.1",
     "nodemon": "^1.12.5",
     "nyc": "^11.3.0"
