@@ -1,15 +1,18 @@
-const express = require('express');
-const server = new express();
-const port = process.env.PORT || 8081;
+import app from "./app";
+const PORT = process.env.PORT || 8081;
 
-server.get('/', async(req,res) => {
-	await res.json({
-		data: 'Hello World'
+app.listen(PORT, () => {
+    console.log('Express server listening on port ' + PORT);
+})
+
+app.get('/', (req:any,res:any) => {
+	res.json({
+		note: 'Please use the REST API.'
 	});
 });
 
-server.get('/users', async(req,res)=>{
-	await res.json({
+app.get('/users', (req,res)=>{
+	res.json({
 		users: [
 			{ id      : 1,
 				name    : 'Socrates',
@@ -34,8 +37,3 @@ server.get('/users', async(req,res)=>{
 		]
 	});
 });
-
-
-
-server.listen(port);
-console.log(`Server listening on port ${port}`);

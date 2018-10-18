@@ -5,15 +5,22 @@
   "author": "supernoir <kawohl.bentodesign@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "server": "nodemon server.js",
-    "dev": "nodemon index.js",
+    "build": "tsc",
+    "dev": "ts-node ./lib/server.ts",
+    "start": "nodemon ./dist/server.js",
+    "prod": "npm run build && npm run start",
     "test": "nyc mocha --watch"
   },
   "dependencies": {
+    "@types/express": "^4.16.0",
+    "body-parser": "^1.18.3",
     "chai": "^4.1.2",
     "express": "^4.16.4",
     "mocha": "^4.0.1",
     "nodemon": "^1.12.5",
-    "nyc": "^11.3.0"
+    "npm": "^6.4.1",
+    "nyc": "^11.3.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.3"
   }
 }
